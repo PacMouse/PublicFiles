@@ -1,0 +1,14 @@
+
+INSERT INTO `drawings`
+(`Proj_No`,`AssNumber`,`AssType`,`DwgNo`,`DwgType`,`DwgPlatform`, `Revision`, `Description`, `Material`, `HeatTreat`, 
+`Finish`, `QuantityRequired`, `MaterialSize`, `DrawnBy`, `DrawnDate`, `Notes`,  `Engraving`, `EngravingMethod`, `QualityLevel`, 
+`CustomerDrawing`, `PdmFileID`, `PdmDrwFileID`)
+VALUES
+(222333,25,'M',0, 2, @p1, @p2, @p3, @p4, @p5, 
+@p6, 1, @p7, @p8, @p9, @p10, @p11, @p12, @p13, 0, 0, 0)
+ON DUPLICATE KEY UPDATE `DwgPlatform` = @p1, `Revision` = @p2, `Description` = @p3, `Material` = @p4, `HeatTreat` = @p5,
+`Finish` = @p6, `QuantityRequired` = 1, `MaterialSize` = @p7, `DrawnBy` = @p8, `DrawnDate` = @p9, `Notes` = @p10,  
+`Engraving` = @p11, `EngravingMethod` = @p12, `QualityLevel` = @p13, 
+`CustomerDrawing` = 0, `PdmFileID` = 0, `PdmDrwFileID` = 0;
+
+@p1 = SW, @p2 = , @p3 = TOOL BALANCER ASSEMBLY, @p4 = N/A, @p5 = N/A, @p6 = N/A, @p7 = SEE DETAIL, @p8 = ERICK RAYOFF, @p9 = 2019-11-26, @p10 = , @p11 = 1, @p12 = 0, @p13 = 0, 
